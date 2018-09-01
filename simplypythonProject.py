@@ -84,11 +84,10 @@ while(confirm):
 	print("1.Result of All Students")
 	print("2.Score of Students")
 	print("3.Add Records of a new Student")
-	print("4.Summary of Result")
-	print("5.Modify the Score")
-	print("6.Delete a Record")
-	print("7.Transfer data to File")
-	print("8.Close the Program")
+	print("4.Modify the Score")
+	print("5.Delete a Record")
+	print("6.Transfer data to File")
+	print("7.Close the Program")
 	
 	option = eval(input("\nEnter the Desired Option: "))
 	if(option == 1):
@@ -101,18 +100,15 @@ while(confirm):
 		cls()
 		addNew()
 	elif(option == 4):
-		cls();
-		summary()
-	elif(option == 5):
 		cls()
 		modify()
-	elif(option == 6):
+	elif(option == 5):
 		cls()
 		delete()
-	elif(option == 7):
+	elif(option == 6):
 		cls()
 		transfer()
-	elif(option == 8):
+	elif(option == 7):
 		cls()
 		print("Thank you for using our Application. SEE you SOON")
 		confirm = False
