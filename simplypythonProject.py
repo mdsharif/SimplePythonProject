@@ -4,22 +4,33 @@ def cls():
 
 #function 'results'
 def results():
-	print("inside result")
 	f = open('allResults.txt','r')
 	print("RollNo.%15sName%16sMarks" %("",""))
 	print()
 	for line in f:
-		data = line.split(':')
+		data = line.split(':')	#each fetched recored splitted
 		print("%-22s%-20s%-10s\r" %(data[0],data[1],data[2]),end='')
 	f.close()
 	print()
 	print()
-
 #function 'results' end
 
 #function 'score'
 def score():
-	print("inside score")
+	isFound = False
+	print("**Score of a Student**")
+	rollNumber = input("Enter Your Roll Number : ")
+	f = open('allResults.txt','r')
+	for line in f:
+		data = line.split(':')
+		if(rollNumber == data[0]):
+			print("Hi",data[1],"Your score is",data[2])
+			isFound = True
+	if(isFound == False):
+		print("Roll Number",rollNumber,"is not available in our File.")
+	f.close()
+	print()
+	print()
 #function 'score' end
 
 #function 'addNew'
@@ -60,7 +71,7 @@ while(confirm):
 
 	print("1.Result of All Students")
 	print("2.Score of Students")
-	print("3.Add Records of a new Students")
+	print("3.Add Records of a new Student")
 	print("4.Summary of Result")
 	print("5.Modify the Score")
 	print("6.Delete a Record")
