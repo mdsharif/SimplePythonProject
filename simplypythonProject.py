@@ -4,8 +4,17 @@ def cls():
 
 #function 'results'
 def results():
-
 	print("inside result")
+	f = open('allResults.txt','r')
+	print("RollNo.%15sName%16sMarks" %("",""))
+	print()
+	for line in f:
+		data = line.split(':')
+		print("%-22s%-20s%-10s\r" %(data[0],data[1],data[2]),end='')
+	f.close()
+	print()
+	print()
+
 #function 'results' end
 
 #function 'score'
