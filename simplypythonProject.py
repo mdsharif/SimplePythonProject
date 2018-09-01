@@ -35,8 +35,20 @@ def score():
 
 #function 'addNew'
 def addNew():
-	print('inside addNew')
-#function 'addNew' end
+	cls()
+	print("**Adding a new Record to the File**")
+	print("Enter the Below asked Information :")
+	rollNumber = input("%10sRoll No. : " %(""))
+	name = input("%10sName : " %(""))
+	score = input("%10sScore : " %(""))
+	f = open('allResults.txt','a')
+	f.write("\n")
+	f.write(rollNumber+":"+name+":"+score)
+	print(name,"'s detail has Successfully Added.")
+	f.close()
+	print()
+	print()
+	#function 'addNew' end
 
 #function 'summary'
 def summary():
